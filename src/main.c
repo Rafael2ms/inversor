@@ -37,20 +37,25 @@ int main() {
 				c = pop();
 				
 				printf("%c", c);
-			}
-			if (buffer[point] != '\n'){
-				printf(" ");
-			}else{
-				printf('\n');
+
 			}
 			point = var;
 			posi_palavra = var;
-				
+
+			if (buffer[point-1] != '\n'){
+				printf(" ");
+			}			
+			 else{	
+			 	printf("\n");
+			 }
+			
+							
 		} else {
 			//coloca caractere na pilha;
 			push(buffer[point]);
 			point++;	
 		}
 	}
+	
 	return 0;
 }
